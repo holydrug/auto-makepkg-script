@@ -1,0 +1,16 @@
+#! /bin/bash
+
+a=10
+b=0
+
+number=($b)
+list=($(ls ~/tools/))
+
+
+while [[ ${number[$b]} -le $a ]]
+do
+	cd ~/tools/${list[$b]}
+	makepkg -sric --noconfirm
+ 	((b++))
+done
+
