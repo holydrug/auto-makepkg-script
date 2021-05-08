@@ -1,6 +1,6 @@
 #! /bin/bash
 
-a=10
+a=100
 b=0
 
 number=($b)
@@ -10,7 +10,7 @@ list=($(ls ~/tools/))
 while [[ ${number[$b]} -le $a ]]
 do
 	cd ~/tools/${list[$b]}
-	makepkg -sric --noconfirm
+	makepkg -sric --noconfirm --needed
  	((b++))
 done
 
